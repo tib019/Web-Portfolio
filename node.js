@@ -9,7 +9,7 @@ const wss = new WebSocket.Server({ server });
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'password',
+    password: process.env.DB_PASSWORD,
     database: 'game_scores'
 });
 

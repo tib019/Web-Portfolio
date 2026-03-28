@@ -9,7 +9,7 @@ const wss = new WebSocket.Server({ server });
 const pool = mariadb.createPool({
     host: 'localhost',
     user: 'root',
-    password: 'Tonnenkraft96',
+    password: process.env.DB_PASSWORD,
     database: 'game_scores',
     connectionLimit: 5  
 });
